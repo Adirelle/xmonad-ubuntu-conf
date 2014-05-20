@@ -25,6 +25,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.Reflect
+import XMonad.Layout.MouseResizableTile
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Hooks.DynamicLog
@@ -121,12 +122,12 @@ defaultLayouts = smartBorders(avoidStruts(
   -- and remaining windows tile on the right. By default each area
   -- takes up half the screen, but you can resize using "super-h" and
   -- "super-l".
-  ResizableTall 1 (3/100) (1/2) []
+  mouseResizableTile
 
   -- Mirrored variation of ResizableTall. In this layout, the large
   -- master window is at the top, and remaining windows tile at the
   -- bottom of the screen. Can be resized as described above.
-  ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
+  ||| Mirror (mouseResizableTile)
 
   -- Full layout makes every window full screen. When you toggle the
   -- active window, it will bring the active window to the front.

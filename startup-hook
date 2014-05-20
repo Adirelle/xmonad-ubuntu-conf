@@ -17,9 +17,14 @@ if [ -z "$(pgrep pidgin)" ] ; then
     pidgin &
 fi
 
-# Remmina remote desktop connection client (-i: start hidden)
-if [ -z "$(pgrep remmina)" ] ; then
-    remmina -i &
+# KeePass2
+if [ -z "$(pgrep -f keepass2)" ] ; then
+    keepass2 &
+fi
+
+# Seafile
+if [ -z "$(pgrep seafile-applet)" ] ; then
+    seafile-applet &
 fi
 
 # Network manager, so we don't have to configure wifi at the command line.

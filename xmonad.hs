@@ -133,7 +133,7 @@ defaultLayouts = smartBorders(avoidStruts(
 
   -- Full layout makes every window full screen. When you toggle the
   -- active window, it will bring the active window to the front.
-  ||| noBorders Full
+  -- ||| noBorders Full
 
   -- ThreeColMid layout puts the large master window in the center
   -- of the screen. As configured below, by default it takes of 3/4 of

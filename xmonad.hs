@@ -118,17 +118,17 @@ startupWorkspace = "5:Dev"  -- which workspace do you want to be on after launch
 -- appear if there is more than one visible window.
 -- "avoidStruts" modifier makes it so that the layout provides
 -- space for the status bar at the top of the screen.
-defaultLayouts = maximize(smartBorders(avoidStruts(
+defaultLayouts = smartBorders(avoidStruts(
   -- ResizableTall layout has a large master window on the left,
   -- and remaining windows tile on the right. By default each area
   -- takes up half the screen, but you can resize using "super-h" and
   -- "super-l".
-  mouseResizableTile
+  maximize (mouseResizableTile)
 
   -- Mirrored variation of ResizableTall. In this layout, the large
   -- master window is at the top, and remaining windows tile at the
   -- bottom of the screen. Can be resized as described above.
-  ||| Mirror (mouseResizableTile)
+  ||| maximize (Mirror (mouseResizableTile))
 
   -- Full layout makes every window full screen. When you toggle the
   -- active window, it will bring the active window to the front.

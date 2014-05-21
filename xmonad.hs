@@ -27,6 +27,7 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.Reflect
 import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.Maximize
+import XMonad.Layout.Tabbed
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Hooks.DynamicLog
@@ -148,7 +149,10 @@ defaultLayouts = smartBorders(avoidStruts(
   -- Grid layout tries to equally distribute windows in the available
   -- space, increasing the number of columns and rows as necessary.
   -- Master window is at top left.
-  ||| Grid)))
+  -- ||| Grid
+
+
+  ||| noBorders simpleTabbed ))
 
 
 -- Here we define some layouts which will be assigned to specific
